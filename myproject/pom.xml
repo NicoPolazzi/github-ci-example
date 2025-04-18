@@ -42,7 +42,7 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.5.0-M6</version>
                 <configuration>
-                    <repoToken>${env.COVERALLS_REPO_TOKENS}</repoToken>
+                    <repoToken>${env.COVERALLS_REPO_TOKEN}</repoToken>
                 </configuration>
             </plugin>
         </plugins>
