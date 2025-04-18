@@ -30,7 +30,7 @@ jobs:
             mvn -f myproject/pom.xml clean verify
             surefire-report:report-only
         - name: Archive JUnit Report
-          uses: actions/upload-artifacts@v4
+          uses: actions/upload-artifact@v4
           with:
             name: surefire-report-jdk-${{ matrix.java }}
             path: '**/target/reports' 
