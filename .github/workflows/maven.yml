@@ -38,4 +38,10 @@ jobs:
           if: ${{always()}}
           with:
             name: surefire-report-jdk-${{ matrix.java }}
-            path: '**/target/reports' 
+            path: '**/target/reports'
+        - name: Archive JaCoCo folder
+          uses: actions/upload-artifact@v4
+          if: ${{always()}}
+          with:
+            name: jacoco
+            path: '**/site/jacoco'
