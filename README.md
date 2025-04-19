@@ -1,0 +1,1 @@
+[![Java CI with Maven on Linux](https://github.com/NicoPolazzi/github-ci-example/actions/workflows/maven.yml/badge.svg)](https://github.com/NicoPolazzi/github-ci-example/actions/workflows/maven.yml) [![Coverage Status](https://coveralls.io/repos/github/NicoPolazzi/github-ci-example/badge.svg?branch=main)](https://coveralls.io/github/NicoPolazzi/github-ci-example?branch=main)
