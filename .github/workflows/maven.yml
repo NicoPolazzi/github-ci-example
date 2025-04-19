@@ -11,7 +11,7 @@ jobs:
             matrix:
                 include:
                     - java: 17
-                      additional-maven-args: '-P jacoco'
+                      additional-maven-args: '-Pjacoco coveralls:report'
                     - java: 21
                 
         name: Build with Java ${{matrix.java}} on Linux
@@ -30,6 +30,8 @@ jobs:
             restore-keys: ${{ runner.os }}-m2-
         - name: Build with Maven
           run: mvn -f myproject/pom.xml clean verify ${{matrix.additional-maven-args}}
+          env:
+            COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_TOKEN}}
         - name: Generate JUnit Reports
           run: mvn -f myproject/pom.xml surefire-report:report-only
           if: ${{always()}}
